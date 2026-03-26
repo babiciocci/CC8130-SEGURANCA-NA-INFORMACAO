@@ -1,0 +1,35 @@
+CC8130 - Verificação de Hashes SHA256 e MD5
+Integrantes do grupo:
+  - Bruno Arthur Basso Silva - 22.123.067-5
+  - Gabriela Molina Ciocci - 22.222.032-9
+  - Guilherme Barboza de Albuquerque - 22.224.024-4
+  - Sergio Martins de Oliveira Santos - 22.222.021-2
+
+Critério: a frase é VERDADEIRA somente se SHA256 e MD5 conferem com o texto (UTF-8, sem aspas externas).
+
+=== TABELA 1 - Exemplos de validação ===
+
+Caso                                       SHA256      MD5     Verdadeira?    Classificação
+-----------------------------------------------------------------------------------------------
+SHA256 e MD5 corretos                        OK         OK     SIM            VERDADEIRA (SHA256 e MD5 corretos)
+Somente SHA256 correto                       OK       FALHOU   NÃO            FALSA (somente SHA256 correto)
+Somente MD5 correto                        FALHOU       OK     NÃO            FALSA (somente MD5 correto)
+Nenhum dos dois corretos                   FALHOU     FALHOU   NÃO            FALSA (nenhum dos dois corretos)
+
+=== TABELA 2 - Frases do enunciado (verdadeira = ambos os hashes corretos) ===
+
+#      SHA256      MD5     Verdadeira?    Trecho da frase
+-----------------------------------------------------------------------------------------------
+1        OK         OK     SIM            A primeira das instituições criadas pelo Pe. Roberto Sabóia de Mede...
+2      FALHOU     FALHOU   NÃO            A FEI é uma instituição vinculada estatutariamente à Companhia de J...
+3        OK         OK     SIM            Em 20 de janeiro de 1951 foi realizada a sessão solene da congregaç...
+4      FALHOU     FALHOU   NÃO            A Capela Santo Inácio de Loyola foi construída no ano de 1978, em c...
+5        OK         OK     SIM            Tendo como função principal a promoção do aprimoramento profissiona...
+6      FALHOU     FALHOU   NÃO            Dentro de uma proposta de integração e de agregação de competências...
+7        OK         OK     SIM            O Centro Universitário da FEI passou a fazer parte do seleto grupo ...
+8        OK         OK     SIM            Em 2016 foi realizada a primeira edição do congresso de inovação - ...
+9        OK         OK     SIM            Em 2012 o Centro Universitário FEI celebrou 70 anos de história e d...
+10     FALHOU     FALHOU   NÃO            Em 1999 iniciam-se as atividades da FCI (Faculdade de Informática),...
+
+Resumo: frases verdadeiras (IDs): 1, 3, 5, 7, 8, 9
+Total verdadeiras: 6 de 10
