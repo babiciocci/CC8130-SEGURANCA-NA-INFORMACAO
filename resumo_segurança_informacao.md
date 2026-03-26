@@ -10,6 +10,15 @@ Ideia central: **a qualidade de um sistema depende da qualidade do processo usad
 
 Exemplos atuais mostram que ataques ocorrem em celulares, carros, serviços on‑line e até na cadeia de suprimentos de software. Logo, segurança é um problema real e constante.
 
+Exemplos e temas citados:
+
+- vazamentos de dados (ex.: CPF, telefone, PIX);
+- exploração de falhas em massa (Stagefright, Flash, Uconnect);
+- questões legais e políticas públicas (SOPA/PIPA, Encrypt Act);
+- cyberwar e incidentes de cadeia de suprimentos (ex.: backdoors);
+- side‑channel e speculative execution;
+- UEFI Secure Boot como tema de proteção em baixo nível.
+
 ### 2) Princípios de segurança (o básico)
 
 Os três princípios mais importantes:
@@ -63,6 +72,10 @@ Cada ameaça pode ser avaliada por:
 
 Com essas notas, fica mais fácil priorizar o que corrigir primeiro.
 
+#### Árvores de ataque/ameaça
+
+Outra técnica prática é usar árvores para decompor um ataque em etapas, ajudando a visualizar caminhos possíveis e decidir onde colocar controles.
+
 ### 4) Processo de desenvolvimento de segurança preventiva
 
 Segurança precisa estar presente em todas as fases:
@@ -72,6 +85,10 @@ Segurança precisa estar presente em todas as fases:
 - **Desenvolvimento**: seguir diretrizes de codificação segura, revisar código.
 - **Testes**: testar falhas de segurança, não só funcionalidades.
 - **Manutenção**: corrigir falhas, responder a incidentes, atualizar.
+
+#### Bug Bar
+
+Define um “padrão mínimo” de gravidade para bugs de segurança. Ajuda a decidir o que é bloqueante e precisa ser corrigido antes da entrega.
 
 #### Exemplos de requisitos típicos
 
@@ -97,6 +114,10 @@ Servem para verificar integridade de dados. Boas funções hash precisam:
 - evitar colisões (duas entradas gerarem o mesmo hash).
 
 Exemplo: **SHA‑256** é considerado seguro; **MD5 e SHA‑1** são fracos.
+
+#### Geração de chaves e aleatoriedade
+
+Chaves criptográficas precisam ser geradas com boa aleatoriedade (não previsíveis). Usar bibliotecas e padrões consolidados é obrigatório; algoritmos “caseiros” devem ser evitados.
 
 #### SSL/TLS
 
